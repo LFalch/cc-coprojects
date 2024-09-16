@@ -26,3 +26,7 @@ noread: error no read permission
 - data: any data file that isn't recognised
 
 We will discuss further files to add.
+
+## Current solutions
+
+- <https://github.com/LFalch/file>
