@@ -30,4 +30,4 @@ We will discuss further files to add.
 ## Current solutions
 
 - <https://github.com/LFalch/file>
-- <https://github.com/HaywardHHayward/file>
+- <https://github.com/HaywardHHayward/file-rs>
