@@ -7,13 +7,14 @@ Make a `file(1)` utility that takes in file paths for file to analyse as argumen
 Shows the expected output of running your file program on a couple of files. Example files are contained in this folder. Do `chmod -r noread` first for the correct error.
 
 ```sh
-myfile a empty description.md iso8859-1.txt utf8.txt data.data noread
+myfile a empty description.md iso8859-1.txt utf8.txt data.data null noread
 a: error file not found
 empty: empty
 description.md: ASCII text
 iso8859-1.txt: ISO-8859 text
 utf8.txt: UTF-8 Unicode text
 data.data: data
+null: data
 noread: error no read permission
 ```
 
