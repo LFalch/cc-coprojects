@@ -22,12 +22,22 @@ noread: error no read permission
 
 - empty: the file is empty
 - ASCII text: the file contains ASCII text that is files only with bytes `0x07...0x0d`, `0x1b` and `0x20...0x7e`.
-- ISO 8859-1 text: the file contains the ASCII-extension aka. Latin1 that is ASCII or bytes with decimal value 160-255.
-- UTF-8 text: valid UTF-8 **text** (see UTF-8 on Wikipedia)
-- UTF-16 text: valid UTF-16 **text**, specifying whether a BOM was included
+- ISO 8859 text: the file contains an ASCII-extension eg. Latin1 that is ASCII or bytes with decimal value 160-255.
+- UTF-8 Unicode text: valid UTF-8 encoded Unicode **text** (see UTF-8 on Wikipedia)
+- Little-endian UTF-16 Unicode text: valid UTF-16 encoded Unicode **text** with a byte order mark in the beginning
+- Big-endian UTF-16 Unicode text: valid UTF-16 encoded Unicode **text** with a byte order mark in the beginning
 - data: any data file that isn't recognised
 
-We will discuss further files to add.
+We will discuss further file formats to add.
+
+### Unicode text
+
+The ASCII character set is a subset of the Unicode character set and UTF-8 is backwards compatible with ASCII, whereas ASCII only encodes
+the subset of Unicode codepoints <= 0x7f. Thus all ASCII text files are also UTF-8 text files and the more specific format should be preferred.
+UTF-16 encodes Unicode codepoints with `u16` values and thus is not backwards compatiable with ASCII. They are recognised by starting with a byte order mark.
+All unicode text formats should only be reported if they values are **text**, that is if it's part of the ASCII subset, it has to be of those same codepoints
+that are specified to be ASCII text. It is also possible to encode Unicode codepoints that are bigger than the maximum codepoint, or encode the surrogate codepoints
+used for UTF-16 in UTF-8. Such codepoints are also not text (or even valid UTF-8 and UTF-16).
 
 ## Current solutions
 
