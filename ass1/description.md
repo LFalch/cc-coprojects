@@ -23,7 +23,8 @@ noread: error no read permission
 - empty: the file is empty
 - ASCII text: the file contains ASCII text that is files only with bytes `0x07...0x0d`, `0x1b` and `0x20...0x7e`.
 - ISO 8859-1 text: the file contains the ASCII-extension aka. Latin1 that is ASCII or bytes with decimal value 160-255.
-- UTF-8 text: valid UTF-8 text (see UTF-8 on Wikipedia)
+- UTF-8 text: valid UTF-8 **text** (see UTF-8 on Wikipedia)
+- UTF-16 text: valid UTF-16 **text**, specifying whether a BOM was included
 - data: any data file that isn't recognised
 
 We will discuss further files to add.
