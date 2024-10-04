@@ -15,6 +15,7 @@ iso8859-1.txt: ISO-8859 text
 utf8.txt: UTF-8 Unicode text
 be_utf16.txt: Big-endian UTF-16 Unicode text
 le_utf16.txt: Little-endian UTF-16 Unicode text
+gb.txt: GB 18030 text
 data.data: data
 null: data
 noread: error no read permission
@@ -28,6 +29,7 @@ noread: error no read permission
 - UTF-8 Unicode text: valid UTF-8 encoded Unicode **text** (see UTF-8 on Wikipedia)
 - Little-endian UTF-16 Unicode text: valid UTF-16 encoded Unicode **text** with a byte order mark in the beginning
 - Big-endian UTF-16 Unicode text: valid UTF-16 encoded Unicode **text** with a byte order mark in the beginning
+- GB 18030 text: valid GB 18030 encoded text. A one byte codepoint of GB 18030 encodes directly to ASCII. (see GB 18030 on Wikipedia)
 - data: any data file that isn't recognised
 
 We will discuss further file formats to add.
